@@ -7,5 +7,26 @@ export function getWeather(lat, lon, timezone) {
         latitude: lat,
         longtitude: lon,
         timezone,
-    }})
+    }}).then(({data}) => {
+        return {
+            current: parseCurrentWeather(data),
+            daily: parseDailyWeather(data),
+            hourly: parseHourlyWeather(data)
+        }
+    })
+}
+
+function parseCurrentWeather({ current_weather, daily}) {
+    const { } = current_weather
+    
+    return {
+        currentTemp: ,
+        highTemp: ,
+        lowTemp: ,
+        highFeelsLike: ,
+        lowFeelsLike: 
+        windSpeed: ,
+        precip: ,
+        iconCode: ,
+    }
 }
