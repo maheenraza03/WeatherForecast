@@ -1,5 +1,5 @@
-import "style.css"
-import {getWeather} from "./weather"
+import './style.css';
+import { getWeather } from "../weather"
 import { ICON_MAP } from "./iconMap"
 
 navigator.geolocation.getCurrentPosition(positionSuccess, positionError)
